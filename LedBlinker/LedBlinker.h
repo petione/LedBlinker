@@ -14,7 +14,7 @@ class LedBlinker {
         uint32_t _lowDelay;
         uint32_t _lastBlink;
         uint32_t _lastBlinkR;
-        uint32_t _repeat;
+        int16_t _repeat;
         uint32_t _pause;
         uint32_t repeatCounter;
         boolean _blinkState;
@@ -24,8 +24,8 @@ class LedBlinker {
 		LedBlinker(int pin);
 		void setDelay(uint32_t d);
 		void setDelay(uint32_t h, uint32_t l);
-                void setDelay(uint32_t h, uint32_t l,uint32_t r);
-                void setDelay(uint32_t h, uint32_t l, uint32_t r,uint32_t p);
+                void setDelay(uint32_t h, uint32_t l,int16_t r);
+                void setDelay(uint32_t h, uint32_t l, int16_t r,uint32_t p);
         void blink();
         void start();
         void stop();
